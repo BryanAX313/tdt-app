@@ -2,18 +2,12 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    <meta name="description" content="A new Flutter project.">
-
-    <!-- ✅ CORREGIDO -->
+    <title>Mi App Flutter</title>
     <base href="/tdt-app/">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>tdt_app</title>
+    <meta name="description" content="Aplicación Flutter en GitHub Pages">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" href="favicon.png"/>
-
-    <!-- This script adds the flutter initialization JS code -->
     <script src="flutter.js" defer></script>
   </head>
   <body>
@@ -21,13 +15,12 @@
       window.addEventListener('load', function (ev) {
         _flutter.loader.loadEntrypoint({
           serviceWorker: {
-            serviceWorkerVersion: '1',
-          },
-          onEntrypointLoaded: function (engineInitializer) {
-            engineInitializer.initializeEngine().then(function (appRunner) {
-              appRunner.runApp();
-            });
+            serviceWorkerVersion: 'v1',
           }
+        }).then(function(engineInitializer) {
+          return engineInitializer.initializeEngine();
+        }).then(function(appRunner) {
+          return appRunner.runApp();
         });
       });
     </script>
